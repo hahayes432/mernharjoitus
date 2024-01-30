@@ -1,6 +1,6 @@
 
 export async function hae() {
-    const jokujuttu = await fetch("/", {mode:"cors"});
+    const jokujuttu = await fetch("/", {method:"GET", mode:"cors"});
     if(!jokujuttu.ok) {
         console.error("vituiks meni");
     }
