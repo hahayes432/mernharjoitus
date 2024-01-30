@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import todoRoutes from './routes/todoRoutes.js';
 
-console.log(dotenv.config())
+dotenv.config()
 
 async function connect_db() {
     try{
