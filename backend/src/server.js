@@ -1,9 +1,10 @@
-const express = require("express");
-const mongoose = require("mongoose");
+import express from 'express';
+import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-const cors = require("cors");
-import todoRoutes from './routes/todoRoutes';
-dotenv.config();
+import cors from 'cors';
+import todoRoutes from './routes/todoRoutes.js';
+
+console.log(dotenv.config())
 
 async function connect_db() {
     try{
@@ -19,6 +20,7 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(cors());
+
 app.use("api/todos", todoRoutes);
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)});
